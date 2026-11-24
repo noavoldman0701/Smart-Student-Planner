@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Student Planner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Rubik:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-acc="lilac">
+<div class="app">
+  <aside class="side" id="side" aria-label="תפריט ניווט">
+    <div class="brand"><div class="logo"><svg class="i" viewBox="0 0 24 24"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2z"/><path d="M8 7h8M8 11h5"/></svg></div><div><b>Smart Student Planner</b><small id="brandSub">יומן הלימודים שלי</small></div></div>
+    <nav class="nav" id="nav"></nav>
+    <div class="savest local" id="savest" style="padding:18px 12px 0"><i></i><span>נשמר במכשיר זה</span></div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+  <div class="mainwrap">
+    <header class="top">
+      <button class="ib menubtn" id="menuBtn" aria-label="פתיחת תפריט" aria-expanded="false" aria-controls="side"></button>
+      <a class="ttl grad" href="#dashboard">Smart Student Planner<span class="fl" aria-hidden="true">✿</span></a>
+      <div class="ctx" id="ctx"></div>
+      <span class="today" id="todayLbl"></span>
+      <button class="bell" id="bellBtn" aria-label="התראות" aria-expanded="false" aria-controls="alertsPanel"></button>
+      <div class="searchbox" role="search">
+        <label for="q" class="sr">חיפוש במערכת</label>
+        <input id="q" type="search" placeholder="חיפוש קורסים, מטלות, חומרים…" autocomplete="off" aria-controls="sres">
+        <span id="qic"></span>
+        <div class="sres" id="sres" aria-live="polite"></div>
+      </div>
+    </header>
+    <main id="main" tabindex="-1"></main>
+  </div>
+</div>
+<div id="toasts" aria-live="polite"></div>
+<div class="alerts" id="alertsPanel" role="dialog" aria-modal="false" aria-labelledby="alertsTtl" hidden></div>
+
+<script src="script.js"></script>
+</body>
+</html>
